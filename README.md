@@ -1,54 +1,116 @@
-# React + TypeScript + Vite
+# Abun Dashboard – Modern React Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🚀 Project Overview
 
-Currently, two official plugins are available:
+**Abun Dashboard** is a modern, responsive admin panel built with **React**, **TypeScript**, and **Tailwind CSS**. It features a clean, professional UI with:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- A collapsible sidebar
+- Responsive, accessible design
+- Advanced table functionalities (filtering, sorting, pagination)
 
-## Expanding the ESLint configuration
+The dashboard is primarily designed to manage and monitor article content efficiently.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+🔗 **Live Demo**:  
+[![Watch the video](https://cdn.loom.com/sessions/thumbnails/d86053ad8d0c4a24957ac57892e8fa68-ca9c128a64083367-full-play.gif)](https://www.loom.com/share/d86053ad8d0c4a24957ac57892e8fa68?sid=fc9a474b-0fef-4f50-bfca-475ce7a03bfe)
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🧱 Technology Stack
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- **Framework:** React 19
+- **Build Tool:** Vite
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **UI Components:** shadcn/ui (based on Radix UI primitives)
+- **Routing:** React Router DOM
+- **Icons:** Lucide React
+- **Notifications:** Sonner Toast
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+---
+
+## 📁 Project Architecture
+
+The project follows a modular, component-based architecture with clear separation of concerns.
+
+### Directory Structure
+src/
+├── components/ # Reusable UI components
+│ ├── ui/ # Base UI components (shadcn/ui)
+│ └── ... # Custom components (AppSidebar, PageLoader, etc.)
+├── data/ # Mock data and API simulation
+├── hooks/ # Custom React hooks
+├── layouts/ # Layout components (DashboardLayout)
+├── lib/ # Utility functions and helpers
+├── pages/ # Page components
+└── ...
+
+
+### Key Components
+
+- **App.tsx** – Entry point: sets up routing, providers, and global configs
+- **DashboardLayout** – Layout containing the sidebar and header
+- **AppSidebar** – Collapsible navigation sidebar
+- **Articles.tsx** – Article management page with full filtering/sorting/pagination features
+
+---
+
+## 🎨 Design Principles
+
+### 1. Componentization
+- Reusable and composable UI components
+- Enhances maintainability and code reusability
+
+### 2. Responsive Design
+- Mobile-first approach with progressive enhancement
+- `useIsMobile` hook for screen detection
+- Horizontal scroll support for tables on smaller screens
+
+### 3. Accessibility
+- Semantic HTML
+- ARIA attributes
+- Keyboard navigation support
+- Screen reader and color contrast compliance
+
+### 4. Performance Optimization
+- Lazy loading and code splitting with `React.lazy` and `Suspense`
+- Optimized render cycles
+- Efficient state handling
+
+---
+
+## ✨ Features
+
+- **Responsive Dashboard** – Seamlessly adapts to all screen sizes
+- **Interactive Sidebar** – Collapsible with active state highlights
+- **Tab-Based Navigation** – For different article statuses
+- **Advanced Data Table**:
+  - Multi-column sorting
+  - Real-time filtering and search
+  - Paginated views
+  - Row selection
+- **Toast Notifications** – Feedback for user actions
+- **Skeleton Loaders** – Enhanced perceived performance during fetch
+
+---
+
+## 🛠 Getting Started
+
+### Prerequisites
+- Node.js 18+
+- npm / yarn / bun
+
+### Installation
+
+```bash
+# Clone the repository
+git clone <repository-url>
+
+# Navigate to the project directory
+cd abun-dashboard
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
+

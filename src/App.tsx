@@ -11,8 +11,8 @@ import DashboardLayout from "./layouts/DashboardLayout";
 import Articles from "./pages/Articles";
 import NotFound from "./pages/NotFound";
 
-// Create lazy loaded routes for better performance
-const Keywords = lazy(() => import("./pages/Keywords"));
+// Create lazy loaded routes for better performance 
+const Keywords = lazy(() => import("./pages/Keywords")); // static
 
 
 
