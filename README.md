@@ -33,17 +33,19 @@ The dashboard is primarily designed to manage and monitor article content effici
 The project follows a modular, component-based architecture with clear separation of concerns.
 
 ### Directory Structure
-src/
-├── components/ # Reusable UI components
-│ ├── ui/ # Base UI components (shadcn/ui)
-│ └── ... # Custom components (AppSidebar, PageLoader, etc.)
-├── data/ # Mock data and API simulation
-├── hooks/ # Custom React hooks
-├── layouts/ # Layout components (DashboardLayout)
-├── lib/ # Utility functions and helpers
-├── pages/ # Page components
-└── ...
 
+```text
+src/
+├── components/        # Reusable UI components
+│   ├── ui/            # Base UI components (shadcn/ui)
+│   └── ...            # Custom components (AppSidebar, PageLoader, etc.)
+├── data/              # Mock data and API simulation
+├── hooks/             # Custom React hooks
+├── layouts/           # Layout components (DashboardLayout)
+├── lib/               # Utility functions and helpers
+├── pages/             # Page components
+└── ...
+```
 
 ### Key Components
 
