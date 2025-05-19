@@ -49,7 +49,7 @@ const DashboardLayout = () => {
           <div
             className={`${
               isMobile ? "px-0" : "px-2"
-            } max-w-7xl p-4 mx-auto w-[90vw] md:${open ? "w-[75vw]" : "w-90vw"} `}
+            } max-w-7xl p-4 mx-auto w-[90vw] md:${open ? "w-[75vw]" : "w-[90vw]"} `}
           >
             {isLoading ? <PageLoader /> : <Outlet />}
           </div>
