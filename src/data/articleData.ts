@@ -6,7 +6,7 @@ export interface Article {
   keywordInfo: string;
   words: number;
   createdOn: string;
-  status: "published" | "generated" | "scheduled" | "archived";
+  status: "published" | "generated" | "scheduled" | "archived" | "all";
 }
 
 export const articlesData: Article[] = [
