@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 import AppSidebar from "@/components/AppSidebar";
-import { SidebarTrigger, useSidebar } from "@/components/ui/sidebar";
+import { SidebarTrigger } from "@/components/ui/sidebar";
 import { useState, useEffect } from "react";
 import PageLoader from "@/components/PageLoader";
 import { useIsMobile } from "@/hooks/use-mobile";
@@ -14,7 +14,6 @@ import {
 const DashboardLayout = () => {
   const [isLoading, setIsLoading] = useState(true);
   const isMobile = useIsMobile();
-  const { open } = useSidebar();
 
   useEffect(() => {
     // Simulate initial data loading
@@ -49,7 +48,7 @@ const DashboardLayout = () => {
           <div
             className={`${
               isMobile ? "px-0" : "px-2"
-            } max-w-7xl p-4 mx-auto w-[90vw] md:${open ? "w-[75vw]" : "w-[90vw]"} `}
+            } max-w-7xl p-4 mx-auto w-[90vw] md:w-[75vw] `}
           >
             {isLoading ? <PageLoader /> : <Outlet />}
           </div>
